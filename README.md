@@ -18,7 +18,21 @@ A Python + Flask-based smart ticketing system using real-time facial recognition
 
 ## 📂 Folder Structure
 
-<pre> ``` Smart_Ticketing_System/ ├── App.py # Main Flask app ├── face_recognition_module.py # Face recognition logic ├── fare_calculator.py # Fare calculation logic ├── database.py # SQLite3 database logic ├── templates/ # HTML files (Jinja2) │ ├── index.html │ ├── entry.html │ ├── exit.html │ └── admin.html ├── static/ # (Optional) CSS, JS, images ├── known_faces/ # Stored images of registered users └── README.md ``` </pre>
+```text
+Smart_Ticketing_System/
+├── App.py # Main Flask app
+├── face_recognition_module.py # Face recognition logic
+├── fare_calculator.py # Fare calculation logic
+├── database.py # SQLite3 database logic
+├── templates/ # HTML files (Jinja2)
+│ ├── index.html
+│ ├── entry.html
+│ ├── exit.html
+│ └── admin.html
+├── static/ # (Optional) CSS, JS, images
+├── known_faces/ # Stored images of registered users
+└── README.md
+```
 
 ---
 
@@ -47,4 +61,5 @@ venv\Scripts\activate  # Windows
 
 # Install dependencies
 pip install -r requirements.txt
+
 
