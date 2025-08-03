@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>Register Passenger</h2>
+
+<!-- Capture Photo Form -->
+<form method="POST" action="{{ url_for('capture_photo') }}">
+    <div class="mb-3">
+        <label class="form-label">Name</label>
+        <input type="text" name="name" class="form-control" required value="{{ session.get('name_for_registration', '') }}">
+    </div>
+    <button type="submit" class="btn btn-info">Capture Photo</button>
+</form>
+
+<hr>
+
+<!-- Register Form -->
+<form method="POST" action="{{ url_for('register') }}">
+    <!-- Hidden field to keep name after photo capture -->
+    <input type="hidden" name="name" value="{{ session.get('name_for_registration', '') }}">
+
+    <div class="mb-3">
+        <label class="form-label">Wallet Amount</label>
+        <input type="number" name="wallet" step="0.01" class="form-control" required>
+    </div>
+
+    <button type="submit" class="btn btn-success">Register</button>
+</form>
+{% endblock %}

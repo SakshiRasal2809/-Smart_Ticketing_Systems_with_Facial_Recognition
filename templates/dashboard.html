@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>Trips Dashboard</h2>
+<table class="table table-striped table-hover shadow-sm">
+<thead class="table-dark">
+<tr>
+    <th>ID</th><th>Passenger</th><th>Entry Time</th><th>Exit Time</th><th>Fare</th>
+</tr>
+</thead>
+<tbody>
+{% for trip in trips %}
+<tr>
+    <td>{{ trip[0] }}</td>
+    <td>{{ trip[1] }}</td>
+    <td>{{ trip[2] }}</td>
+    <td>{{ trip[3] or 'Ongoing' }}</td>
+    <td>{{ trip[4] or 'Pending' }}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+{% endblock %}
